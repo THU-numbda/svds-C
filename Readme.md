@@ -1,4 +1,4 @@
-# svds-C (High-performance Program for Computing Truncated SVD)
+# svds-C (A Multi-Thread C Program for Computing Truncated SVD)
 
 ## Author: Xu Feng (Tsinghua University)
 
@@ -14,7 +14,7 @@ svds-C is an open-source software for computing truncated SVD of large matrix.
 
 ## Background
 
-Truncated singular value decomposition (SVD) is an important tool for many computational physics problems. However, the most efficient algorithm of truncated singular value decomposition for large matrix has only an implementation in Matlab. Other programs for truncated SVD have issues of stability or efficiency on parallel computing.
+Truncated singular value decomposition (SVD) is an important tool for many computational physics and data analysis problems. However, the most efficient algorithm of truncated singular value decomposition for large matrix has only an implementation in Matlab. Other programs for truncated SVD have issues of stability or efficiency on parallel computing.
 
 We develop a parallel C program named svds-C, which re-implements the svds in Matlab based on Lanczos bidiagonalization process with augmented restarting scheme. To make the svds-C program running most efficiently on a common computer with only CPU, we employ MKL [1] or OpenBLAS [2] to enable high-performance multiple-thread computing. Besides, several careful treatments are imposed in the implementation for better performance on time and memory cost. Experimental results show that the svds-C exhibits better parallel efficiency and runtime advantage over svds and other programs for truncated SVD. The svds-C program is open-sourced.
 
