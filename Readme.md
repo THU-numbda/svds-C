@@ -28,7 +28,7 @@ We provide two versions of svds-C program for Intel CPU and AMD CPU respectively
 
 ### Modules of the software
 
-The version for Intel CPU:
+**The version for Intel CPU**:
 
 ​        Codes are merged in "Codes/Intel/".
 
@@ -38,7 +38,7 @@ The version for Intel CPU:
 
 ​        **matrix_vector_functions_intel_mkl.c**, **matrix_vector_functions_intel_mkl_ext.c**: contain the basic functions for matrix-matrix, matrix-vector and vector-vector operations implemented with MKL and OpenMP.
 
-The version for AMD CPU:
+**The version for AMD CPU**:
 
 ​        Codes are merged in "Codes/AMD/".
 
@@ -62,13 +62,13 @@ Interfaces of svds-C:
 
 All the files for testing are merged in "Tests/"
 
-The version for Intel CPU:
+**The version for Intel CPU**:
 
 ​        Before compilation, the MKL in oneAPI in [1] should be installed and the path of the libraries of MKL and oneAPI should be modified in "makefile" to make sure those libraries can be found.
 
 ​        Use command "make TYPE_CPU=Intel" to compile the test program for Intel CPU, and run "./svdstest" to test svds-C.
 
-The version for AMD CPU:
+**The version for AMD CPU**:
 
 ​        Before compilation, the OpenBLAS in [2] should be installed and the path of OpenBLAS should be modified in "makefile" to make sure OpenBLAS can be found.
 
