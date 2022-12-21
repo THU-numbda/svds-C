@@ -48,7 +48,7 @@ We provide two versions of svds-C program for Intel CPU and AMD CPU respectively
 
 ​        **matrix_funs.c**: contains the the basic functions for matrix-matrix, matrix-vector and vector-vector operations implemented with OpenBLAS and OpenMP.
 
-Interfaces of svds-C:
+**Interfaces of svds-C**:
 
 ​        **svds_C(A, U, S, V, k)**: compute the rank-$k$ truncated SVD of the sparse matrix $\mathbf{A}$ with default settings. $\mathbf{U}$, $\mathbf{S}$ and $\mathbf{V}$ are the computed left singular vectors, singular values and right singular vectors, respectively.
 
@@ -74,7 +74,9 @@ All the files for testing are merged in "Tests/"
 
 ​        Use command "make TYPE_CPU=AMD" to compile the test program for Intel CPU, and run "./svdstest" to test svds-C.
 
-In the executable "svdstest", we prepare a sparse matrix SNAP in size of 82168 x 82168 [3], and a dense Gaussian random matrix in size of  2000 x 1000 to validate svds-C. 
+**Test cases**:
+
+​        In the executable "svdstest", we prepare a sparse matrix SNAP in size of 82168 x 82168 [3], and a dense Gaussian random matrix in size of  2000 x 1000 to validate svds-C. 
 
 ## References
 
