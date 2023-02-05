@@ -269,7 +269,6 @@ void svds_C(mat_csr *A, mat **Uk, mat **Sk, mat **Vk, int k)
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     
@@ -520,7 +519,6 @@ void svds_C_opt(mat_csr *A, mat **Uk, mat **Sk, mat **Vk, int k, double eps, int
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     
@@ -773,7 +771,6 @@ void svds_C_dense(mat *A, mat **Uk, mat **Sk, mat **Vk, int k)
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     matrix_delete(B_now);
@@ -1023,11 +1020,8 @@ void svds_C_dense_opt(mat *A, mat **Uk, mat **Sk, mat **Vk, int k, double eps, i
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
-        //puts("hahah");
     }
-    //puts("121212");
     matrix_delete(B_now);
     matrix_delete(SB);
     matrix_delete(VB);

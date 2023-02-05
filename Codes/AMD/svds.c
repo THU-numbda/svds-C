@@ -267,7 +267,6 @@ void svds_C_dense(mat *A, mat **Uk, mat **Sk, mat **Vk, int k)
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     
@@ -515,7 +514,6 @@ void svds_C_dense_opt(mat *A, mat **Uk, mat **Sk, mat **Vk, int k, double eps, i
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     
@@ -764,7 +762,6 @@ void svds_C(mat_csr *A, mat **Uk, mat **Sk, mat **Vk, int k)
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     
@@ -1011,7 +1008,6 @@ void svds_C_opt(mat_csr *A, mat **Uk, mat **Sk, mat **Vk, int k, double eps, int
         matrix_get_selected_columns(VBt, inds, VBk);
         matrix_matrix_mult(U, UBk, *Uk);
         matrix_matrix_mult(V, VBk, *Vk);
-        matrix_transpose_matrix_mult(V, V, B_now);
         iters++;
     }
     
